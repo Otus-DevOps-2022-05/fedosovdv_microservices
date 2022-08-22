@@ -1,6 +1,34 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
 
+
+## ДЗ-13 (docker-3)
+1.Разбивка приложения reddit на отдельные образы
+1.1 починка образ post-py (add MarkupSafe==1.1.1 in post-py/requirements.txt)
+2.Оптимизация образов по размеру  - замена образа ubuntu на ruby на базе alpine
+3.Работа с Docker volume
+
+
+### Для запуска необходимо:
+собрать:
+```
+docker build -t post:1.0 ./post-py
+docker build -t comment:1.0 ./comment
+docker build -t ui:2.0 ./ui
+```
+добавить network,volume
+```
+docker network create reddit
+docker volume create reddit_db
+```
+запустить:
+```
+docker run -d --network=reddit --network-alias=post_db --network-alias=comment_db -v reddit_db:/data/db mongo:latest
+docker run -d --network=reddit --network-alias=post post:1.0
+docker run -d --network=reddit --network-alias=comment comment:1.0
+docker run -d --network=reddit -p 9292:9292 ui:2.0
+```
+
 ## ДЗ-12 (docker-2)
 
 * Создание docker host на YC
