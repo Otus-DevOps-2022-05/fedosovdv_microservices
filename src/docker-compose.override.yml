@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+  post_db:
+    image: "mongo:latest"
+    volumes:
+     - post_db:/data/db
+    networks:
+     - back_net
+  ui:
+    image: "${USERNAME}/ui:${UI_VERSION}"
+    ports:
+      - ${UI_PORT}:9292/tcp
+    networks:
+      - front_net
+  post:
+    image: "${USERNAME}/post:${POST_VERSION}"
+    networks:
+      - front_net
+      - back_net
+  comment:
+    image: "${USERNAME}/comment:${COMMENT_VERSION}"
+    networks:
+      - front_net
+      - back_net
+
+volumes:
+  post_db:
+
+networks:
+  front_net:
+  back_net:
