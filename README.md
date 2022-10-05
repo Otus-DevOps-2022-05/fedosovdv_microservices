@@ -1,6 +1,12 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
 
+## ДЗ-17 (monitoring-1)
+- Развернут Prometheus в докере
+- Prometheus добавлен в docker-compose.yml, настроен для мониторинга конечных служб
+- Проверены Healthchecks (остановкой контейнера)
+- Установлен Exporters, проверено возрастание нагрузки при имитации таковой
+
 ## ДЗ-16 (gitlab-ci-1)
 - создана ВМ через cli yandex
 - настроен GitLab(получен пароль root; закрыта регистрация)
