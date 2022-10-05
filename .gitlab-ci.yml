@@ -12,7 +12,7 @@ variables:
 
 before_script:
   - cd reddit
-  - bundle
+  - bundle install
 
 build_job:
   stage: build
@@ -63,7 +63,7 @@ stage:
 
 production:
   stage: production
-  when: manual  
+  when: manual
   only:
     - /^\d+\.\d+\.\d+/
   script:
