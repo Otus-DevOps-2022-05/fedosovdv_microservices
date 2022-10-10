@@ -1,6 +1,14 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
 
+## ДЗ-18 (logging-1)
+- Подготовлено окружение
+- Логирование Docker-контейнеров
+- Сбор неструктурированных логов
+- Визуализация логов
+- Сбор структурированных логов
+- Распределенный трейсинг
+
 ## ДЗ-17 (monitoring-1)
 - Развернут Prometheus в докере
 - Prometheus добавлен в docker-compose.yml, настроен для мониторинга конечных служб
