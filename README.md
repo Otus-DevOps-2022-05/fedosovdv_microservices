@@ -31,6 +31,22 @@ ui-deployment-6647cbff5-7vbh2         1/1     Running   0          57s
 еще вариант запуска с переменными из файла : ```
 env $(cat <env-file> | xargs)  docker-compose up -d```
 
+## ДЗ-15 (docker-4)
+**1. Сетями в Docker**
+- Рассмотрены типы сетей в Docker none, host, bridge
+
+
+**2. docker-compose**
+- параметризирован **docker-compose.yml**
+- прописаны переменные в **.env**
+
+Имя проекта по умолчанию - имя каталога где лежит  **docker-compose.yml**
+поменять мохно `docker-compose -p [имя_проекта] up -d` или указав переменной окружения **COMPOSE_PROJECT_NAME**
+
+
+еще вариант запуска с переменными из файла : ```
+env $(cat <env-file> | xargs)  docker-compose up -d```
+
 
 ## ДЗ-14 (docker-3)
 1.Разбивка приложения reddit на отдельные образы
