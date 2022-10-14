@@ -1,5 +1,12 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
+
+## ДЗ-20: (kubernetes-2)
+- развернуто локальное окружение для работы с Kubernetes на minikube
+- развернут Kubernetes в YC  
+- деплой reddit в Kubernetes YC (скины в kubernetes/screenshot)
+
+
 ## ДЗ-19: (kubernetes-1)
 - созданы манифесты приложений
 - созданы vm на YC, установлены kubelet kubeadm kubectl
