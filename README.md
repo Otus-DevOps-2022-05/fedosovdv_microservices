@@ -1,6 +1,7 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
 
+
 ## ДЗ-20: (kubernetes-2)
 - развернуто локальное окружение для работы с Kubernetes на minikube
 - развернут Kubernetes в YC  
