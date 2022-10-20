@@ -1,6 +1,14 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
 
+## ДЗ-16 (gitlab-ci-1)
+- создана ВМ через cli yandex
+- настроен GitLab(получен пароль root; закрыта регистрация)
+- добавлен Reddit в проект
+- на локальную машину (ввиду нехватки памяти для тестов) поставлен раннер
+- добавлена зависимость от тегов для production и stage
+- добавлены динамические окружения
+
 ## ДЗ-15 (docker-4)
 **1. Сетями в Docker**
 - Рассмотрены типы сетей в Docker none, host, bridge
