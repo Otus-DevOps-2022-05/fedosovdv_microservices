@@ -10,7 +10,6 @@ spec:
   type: NodePort
   ports:
   - port: 9292
-    nodePort: 30292
     protocol: TCP
     targetPort: 9292
   selector:

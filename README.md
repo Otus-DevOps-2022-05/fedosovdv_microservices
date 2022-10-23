@@ -1,6 +1,15 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
 
+## ДЗ-21: (kubernetes-3)
+
+- установлен Ingress контроллер
+- добавлены ingress манифесты  
+- создан сертификат
+- ограничен доступ к mongodb
+- создан диск в YC, создан persistent volume для mongo
+
+
 ## ДЗ-20: (kubernetes-2)
 - развернуто локальное окружение для работы с Kubernetes на minikube
 - развернут Kubernetes в YC  
