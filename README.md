@@ -32,6 +32,16 @@ post-deployment-b5f4dc6cf-xq42z       1/1     Running   0          71s
 ui-deployment-6647cbff5-7vbh2         1/1     Running   0          57s
 ```
 
+
+## ДЗ-16 (gitlab-ci-1)
+- создана ВМ через cli yandex
+- настроен GitLab(получен пароль root; закрыта регистрация)
+- добавлен Reddit в проект
+- на локальную машину (ввиду нехватки памяти для тестов) поставлен раннер
+- добавлена зависимость от тегов для production и stage
+- добавлены динамические окружения
+
+
 ## ДЗ-15 (docker-4)
 **1. Сетями в Docker**
 - Рассмотрены типы сетей в Docker none, host, bridge
