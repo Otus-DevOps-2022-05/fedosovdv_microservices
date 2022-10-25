@@ -1,5 +1,34 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
+## ДЗ-19: (kubernetes-1)
+- созданы манифесты приложений
+- созданы vm на YC, установлены kubelet kubeadm kubectl
+- на master выполнен init, добавлен worker (после добавления - NotReady)
+- в манифаесте calico CALICO_IPV4POOL_CIDR установлено в 10.244.0.0/16 (после установки calico ноды - Ready)
+- применены рание созданные манифесты ```kubectl apply -f <filename>```
+
+```
+kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+comment-deployment-6989ff6cc5-fbqm9   1/1     Running   0          63s
+mongo-deployment-797dcbffd4-kgz4c     1/1     Running   0          57m
+post-deployment-b5f4dc6cf-xq42z       1/1     Running   0          71s
+ui-deployment-6647cbff5-7vbh2         1/1     Running   0          57s
+```
+
+## ДЗ-18 (logging-1)
+- Подготовлено окружение
+- Логирование Docker-контейнеров
+- Сбор неструктурированных логов
+- Визуализация логов
+- Сбор структурированных логов
+- Распределенный трейсинг
+
+## ДЗ-17 (monitoring-1)
+- Развернут Prometheus в докере
+- Prometheus добавлен в docker-compose.yml, настроен для мониторинга конечных служб
+- Проверены Healthchecks (остановкой контейнера)
+- Установлен Exporters, проверено возрастание нагрузки при имитации таковой
 
 ## ДЗ-21: (kubernetes-3)
 
@@ -42,9 +71,33 @@ ui-deployment-6647cbff5-7vbh2         1/1     Running   0          57s
 - добавлены динамические окружения
 
 
+
+## ДЗ-20: (kubernetes-2)
+- развернуто локальное окружение для работы с Kubernetes на minikube
+- развернут Kubernetes в YC  
+- деплой reddit в Kubernetes YC (скины в kubernetes/screenshot)
+
+
+## ДЗ-19: (kubernetes-1)
+- созданы манифесты приложений
+- созданы vm на YC, установлены kubelet kubeadm kubectl
+- на master выполнен init, добавлен worker (после добавления - NotReady)
+- в манифаесте calico CALICO_IPV4POOL_CIDR установлено в 10.244.0.0/16 (после установки calico ноды - Ready)
+- применены рание созданные манифесты ```kubectl apply -f <filename>```
+
+```
+kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+comment-deployment-6989ff6cc5-fbqm9   1/1     Running   0          63s
+mongo-deployment-797dcbffd4-kgz4c     1/1     Running   0          57m
+post-deployment-b5f4dc6cf-xq42z       1/1     Running   0          71s
+ui-deployment-6647cbff5-7vbh2         1/1     Running   0          57s
+```
+
 ## ДЗ-15 (docker-4)
 **1. Сетями в Docker**
 - Рассмотрены типы сетей в Docker none, host, bridge
+
 
 **2. docker-compose**
 - параметризирован **docker-compose.yml**
