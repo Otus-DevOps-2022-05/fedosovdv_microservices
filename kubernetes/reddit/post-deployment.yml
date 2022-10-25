@@ -11,14 +11,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-
       app: reddit
       component: post
   template:
     metadata:
       name: post
       labels:
-
         app: reddit
         component: post
         post-db: "true"

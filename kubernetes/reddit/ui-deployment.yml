@@ -27,4 +27,3 @@ spec: # Блок спецификации деплоя
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-
