@@ -1,5 +1,20 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
+## ДЗ-19: (kubernetes-1)
+- созданы манифесты приложений
+- созданы vm на YC, установлены kubelet kubeadm kubectl
+- на master выполнен init, добавлен worker (после добавления - NotReady)
+- в манифаесте calico CALICO_IPV4POOL_CIDR установлено в 10.244.0.0/16 (после установки calico ноды - Ready)
+- применены рание созданные манифесты ```kubectl apply -f <filename>```
+
+```
+kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+comment-deployment-6989ff6cc5-fbqm9   1/1     Running   0          63s
+mongo-deployment-797dcbffd4-kgz4c     1/1     Running   0          57m
+post-deployment-b5f4dc6cf-xq42z       1/1     Running   0          71s
+ui-deployment-6647cbff5-7vbh2         1/1     Running   0          57s
+```
 
 ## ДЗ-18 (logging-1)
 - Подготовлено окружение
@@ -26,6 +41,22 @@ fedosovdv microservices repository
 ## ДЗ-15 (docker-4)
 **1. Сетями в Docker**
 - Рассмотрены типы сетей в Docker none, host, bridge
+
+**2. docker-compose**
+- параметризирован **docker-compose.yml**
+- прописаны переменные в **.env**
+
+Имя проекта по умолчанию - имя каталога где лежит  **docker-compose.yml**
+поменять мохно `docker-compose -p [имя_проекта] up -d` или указав переменной окружения **COMPOSE_PROJECT_NAME**
+
+
+еще вариант запуска с переменными из файла : ```
+env $(cat <env-file> | xargs)  docker-compose up -d```
+
+## ДЗ-15 (docker-4)
+**1. Сетями в Docker**
+- Рассмотрены типы сетей в Docker none, host, bridge
+
 
 **2. docker-compose**
 - параметризирован **docker-compose.yml**
