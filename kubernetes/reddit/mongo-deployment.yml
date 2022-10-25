@@ -2,12 +2,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+
   name: mongo
   labels:
     app: reddit
     component: mongo
     comment-db: "true"
     post-db: "true"
+
 spec:
   replicas: 1
   selector:

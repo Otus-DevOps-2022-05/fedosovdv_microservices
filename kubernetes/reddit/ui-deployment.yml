@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata: # Блок метаданных деплоя
@@ -26,3 +27,4 @@ spec: # Блок спецификации деплоя
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
+
