@@ -1,5 +1,13 @@
 # fedosovdv_microservices
 fedosovdv microservices repository
+
+## ДЗ-22: (kubernetes-4)
+
+- установлен helm
+- добавлены Chart’ы, шаблоны манифестов
+- добавлен ci/cd для GitLab
+
+
 ## ДЗ-19: (kubernetes-1)
 - созданы манифесты приложений
 - созданы vm на YC, установлены kubelet kubeadm kubectl
